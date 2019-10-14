@@ -153,6 +153,7 @@ h2 {
   height: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  list-style-type: none;
 }
 
 .footer__menu__item a {
