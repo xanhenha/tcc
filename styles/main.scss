@@ -1,4 +1,6 @@
 $mainWhite: #eff;
+$mainOrange: #e84d15;
+$shadowOrange: #5d1f08;
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -9,7 +11,7 @@ h2 {
     margin: 0 0 20px;
     font-size: 20px;
     text-transform: uppercase;
-    background: #333;
+    background: $shadowOrange;
     color: $mainWhite;
     line-height: 42px;
 }
@@ -25,7 +27,7 @@ h2 {
 
     &__bar-content {
         display: block;
-        background: #555;
+        background: $mainOrange;
         height: 50px;
         color: $mainWhite;
         padding: 0 20px;
@@ -33,8 +35,11 @@ h2 {
 
         span {
             line-height: 50px;
-            font-size: 35px;
+            font-size: 38px;
             text-transform: uppercase;
+            padding: 5px;
+            background: #fff;
+            color: $mainOrange;
         }
     }
 }
@@ -106,6 +111,7 @@ h2 {
                 border-radius: 50%;
             }
         }
+        
 
         &__description {
             background: #eee;
@@ -124,26 +130,111 @@ h2 {
 }
 
 .footer {
+    position: sticky;
+    height: 50px;
+    bottom: 0;
+    background: #000;
+    overflow: hidden;
+
     &__menu {
-        list-style-type: none;
+        margin: 0 auto;
         padding: 0;
-        margin: 0;
+        background: #fff;
+        display: table;
 
         &__item {
+            width: 100px;
+            border-top: 2px solid $mainOrange;
+            background: #222;
             float: left;
-            width: 33%;
+            height: 50px;
             box-sizing: border-box;
-            text-align: center;
-            display: block;
 
             a {
-                margin: 0 10px 10px;
-                padding: 5px;
+                background: transparent;
+                text-transform: uppercase;
+                color: $mainOrange;
+                line-height: 50px;
                 text-decoration: none;
-                background: #eee;
-                color: #222;
-                display: block
+                font-weight: bold;
+                display: block;
+                text-align: center;
+                height: 50px;
+                box-sizing: border-box;
             }
         }
+    }
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 24px;
+        line-height: 50px;
+    }
+
+    .wrapper {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .highlight {
+        &__title {
+            font-size: 40px;
+        }
+    }
+
+    .article {
+        p {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    .team {
+        &__member {
+            &__description {
+                padding: 50px 20px 30px;
+                p {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 993px) {
+    h2 {
+        font-size: 30px;
+        line-height: 56px;
+    }
+
+    .wrapper {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    .highlight {
+        &__title {
+            font-size: 50px;
+        }
+    }
+}
+
+@media (min-width: 993px) {
+
+    .wrapper {
+        width: 900px;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+
+    .wrapper {
+        width: 1100px;
+        margin: 0 auto;
     }
 }
